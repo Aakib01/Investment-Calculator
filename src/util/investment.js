@@ -14,8 +14,8 @@ export function calculateInvestmentResults({
   let investmentValue = initialInvestment;
 
   for (let i = 0; i < duration; i++) {
-    const interestEarnedInYear = Number(investmentValue) * (Number(expectedReturn) / 100);
-    investmentValue = Number(investmentValue) + Number(interestEarnedInYear) + Number(annualInvestment);
+    const interestEarnedInYear = investmentValue * (expectedReturn / 100);
+    investmentValue += interestEarnedInYear + annualInvestment;
     annualData.push({
       year: i + 1, // year identifier
       interest: interestEarnedInYear, // the amount of interest earned in this year
@@ -32,7 +32,7 @@ export function calculateInvestmentResults({
 // Example Usage: formatter.format(1000) => yields "$1,000"
 export const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
-  currency: 'USD',
+  currency: 'INR',
   minimumFractionDigits: 0,
   maximumFractionDigits: 0,
 });
