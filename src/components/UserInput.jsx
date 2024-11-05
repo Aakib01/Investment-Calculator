@@ -11,14 +11,14 @@ export default function UserInput({onValueChange, inputData}) {
     <section id="user-input">
       <div className = "input-group">
         <p>
-        <label>Initial Investment</label>
-            <input name="initialInvestment"  type="number" required  value ={inputData.initialInvestment} onChange={handleOnValueChange}/>
+        <label>Monthly Investment</label>
+            <input name="initialInvestment"  type="number" required value ={inputData.initialInvestment} onChange={handleOnValueChange}/>
         
         </p>
-        <p>
+        {/* <p>
         <label>Annual Investment</label>
             <input name="annualInvestment" type="number" required value ={inputData.annualInvestment} onChange={handleOnValueChange}/>
-        </p>
+        </p> */}
                 
       </div>
       <div className = "input-group">

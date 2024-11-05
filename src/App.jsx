@@ -4,9 +4,8 @@ import Result from "./components/Result";
 import UserInput from "./components/UserInput";
 
 const DATA = {
-  initialInvestment: 10000,
-  annualInvestment: 1200,
-  expectedReturn: 6,
+  initialInvestment: 1000,
+  expectedReturn:10,
   duration: 10,
 };
 
