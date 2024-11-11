@@ -12,7 +12,7 @@ export default function UserInput({onValueChange, inputData}) {
       <div className = "input-group">
         <p>
         <label>Monthly Investment</label>
-            <input name="initialInvestment"  type="number" required value ={inputData.initialInvestment} onChange={handleOnValueChange}/>
+            <input name="initialInvestment"  type="number" required value ={inputData.initialInvestment === 0 ?" ":inputData.initialInvestment} onChange={handleOnValueChange}/>
         
         </p>
         {/* <p>
@@ -24,11 +24,11 @@ export default function UserInput({onValueChange, inputData}) {
       <div className = "input-group">
       <p>
       <label>Expected Return</label>
-            <input name="expectedReturn" type="number" required value ={inputData.expectedReturn} onChange={handleOnValueChange}/>
+            <input name="expectedReturn" type="number" required value ={inputData.expectedReturn === 0 ?" ":inputData.expectedReturn} onChange={handleOnValueChange}/>
         </p>
         <p>
         <label>Duration</label>
-            <input name="duration" type="number" required value ={inputData.duration} onChange={handleOnValueChange}/>
+            <input name="duration" type="number" required value ={inputData.duration=== 0 ?" ":inputData.duration} onChange={handleOnValueChange}/>
         </p>
       </div>
       
